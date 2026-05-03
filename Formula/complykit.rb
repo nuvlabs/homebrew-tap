@@ -5,21 +5,21 @@
 class Complykit < Formula
   desc "Compliance-as-code CLI for startups · SOC 2 · HIPAA · CIS"
   homepage "https://github.com/nuvlabs/complykit"
-  version "2.0.3"
+  version "2.0.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/nuvlabs/complykit/releases/download/v2.0.3/comply_darwin_amd64.tar.gz"
-      sha256 "68430ca53307a19d8f082c6869cf36e3dd54db48b81d9a6e2eb3ba09e968c9dd"
+      url "https://github.com/nuvlabs/complykit/releases/download/v2.0.4/comply_darwin_amd64.tar.gz"
+      sha256 "c84b1b3d39138d081c2262a21d917e02e39fab715d418eefc1d44bed92c3e865"
 
       define_method(:install) do
         bin.install "comply"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/nuvlabs/complykit/releases/download/v2.0.3/comply_darwin_arm64.tar.gz"
-      sha256 "f354945879acae4091838f3f5643bb189b2fdf3d719e467d86d25bcbcac98af0"
+      url "https://github.com/nuvlabs/complykit/releases/download/v2.0.4/comply_darwin_arm64.tar.gz"
+      sha256 "5a8914dd9b7845e9d20ef2391f68630ea03ed13ab29bceac40102d6bcc7e6ab4"
 
       define_method(:install) do
         bin.install "comply"
@@ -29,15 +29,15 @@ class Complykit < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nuvlabs/complykit/releases/download/v2.0.3/comply_linux_amd64.tar.gz"
-      sha256 "3dbd2f1ed5cdf29a169bb3aa076b629ffc8b8b7126e82d2843d0478ed8e1f8a4"
+      url "https://github.com/nuvlabs/complykit/releases/download/v2.0.4/comply_linux_amd64.tar.gz"
+      sha256 "8bcdb17bafd0acc8f96827ede917bfdb0e36c68001525f40cc83700a6894c377"
       define_method(:install) do
         bin.install "comply"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nuvlabs/complykit/releases/download/v2.0.3/comply_linux_arm64.tar.gz"
-      sha256 "baf8d5707be99d93ba2312b43aef008734932a958897014b6e79fe6f5de25188"
+      url "https://github.com/nuvlabs/complykit/releases/download/v2.0.4/comply_linux_arm64.tar.gz"
+      sha256 "c52c747e555782df3cc4b51ba09d6160c45b47514e0c0a7b2f856d64ccf238c7"
       define_method(:install) do
         bin.install "comply"
       end
